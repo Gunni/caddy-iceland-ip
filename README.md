@@ -1,13 +1,13 @@
 # trusted_proxy module for caddy
 
-This module retrieves cloudflare ips from their offical website, [ipv4](https://www.cloudflare.com/ips-v4) and [ipv6](https://www.cloudflare.com/ips-v6). It is supported from caddy v2.6.3 onwards.
+This module retrieves Icelandic ips from RIX, [ipv4](https://rix.is/is-net.txt) and [ipv6](https://rix.is/is-net6.txt).
 
 # Example config
 
 Put following config in global options under corresponding server options
 
 ```
-trusted_proxies cloudflare {
+trusted_proxies iceland {
     interval 12h
     timeout 15s
 }
@@ -17,5 +17,5 @@ trusted_proxies cloudflare {
 
 | Name     | Description                                            | Type     | Default    |
 |----------|--------------------------------------------------------|----------|------------|
-| interval | How often cloudflare ip lists are retrieved            | duration | 1h         |
-| timeout  | Maximum time to wait to get a response from cloudflare | duration | no timeout |
+| interval | How often icelandic ip lists are retrieved             | duration | 1h         |
+| timeout  | Maximum time to wait to get a response from RIX        | duration | no timeout |
